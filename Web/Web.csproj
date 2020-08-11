@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A63CB6C6-F58D-411A-BF98-8F7E430D10D9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>selftprovisioning.web</RootNamespace>
+    <AssemblyName>selftprovisioning.web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\agencia\elements.css" />
+    <Content Include="App_Themes\agencia\images\ad\icon1.gif" />
+    <Content Include="App_Themes\agencia\images\ad\icon2.gif" />
+    <Content Include="App_Themes\agencia\images\ad\icon3.gif" />
+    <Content Include="App_Themes\agencia\images\blank.gif" />
+    <Content Include="App_Themes\agencia\images\corner-right.gif" />
+    <Content Include="App_Themes\agencia\images\editor\bg.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-batch.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-cancel.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-delete.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-edit.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-log.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-new.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-refresh.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-revogar-acesso.gif" />
+    <Content Include="App_Themes\agencia\images\editor\button-solicitar-acesso.gif" />
+    <Content Include="App_Themes\agencia\images\fancybox-x.png" />
+    <Content Include="App_Themes\agencia\images\fancybox-y.png" />
+    <Content Include="App_Themes\agencia\images\fancybox.png" />
+    <Content Include="App_Themes\agencia\images\fancy_close.png" />
+    <Content Include="App_Themes\agencia\images\fancy_loading.png" />
+    <Content Include="App_Themes\agencia\images\fancy_nav_left.png" />
+    <Content Include="App_Themes\agencia\images\fancy_nav_right.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_e.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_n.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_ne.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_nw.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_s.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_se.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_sw.png" />
+    <Content Include="App_Themes\agencia\images\fancy_shadow_w.png" />
+    <Content Include="App_Themes\agencia\images\fancy_title_left.png" />
+    <Content Include="App_Themes\agencia\images\fancy_title_main.png" />
+    <Content Include="App_Themes\agencia\images\fancy_title_over.png" />
+    <Content Include="App_Themes\agencia\images\fancy_title_right.png" />
+    <Content Include="App_Themes\agencia\images\find-person.gif" />
+    <Content Include="App_Themes\agencia\images\header-user.gif" />
+    <Content Include="App_Themes\agencia\images\help.gif" />
+    <Content Include="App_Themes\agencia\images\list-bg.gif" />
+    <Content Include="App_Themes\agencia\images\list-element\access.png" />
+    <Content Include="App_Themes\agencia\images\list-element\access_hover.png" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-empty.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-group.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-mail.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-my.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-pencil-holder.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\icon-permission.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\line-bg.gif" />
+    <Content Include="App_Themes\agencia\images\list-element\outlook.jpg" />
+    <Content Include="App_Themes\agencia\images\list-element\report.png" />
+    <Content Include="App_Themes\agencia\images\list-element\report_hover.png" />
+    <Content Include="App_Themes\agencia\images\list-element\sep.jpg" />
+    <Content Include="App_Themes\agencia\images\loader.gif" />
+    <Content Include="App_Themes\agencia\images\LoddedInUserContainerBg.gif" />
+    <Content Include="App_Themes\agencia\images\logo.gif" />
+    <Content Include="App_Themes\agencia\images\lote.gif" />
+    <Content Include="App_Themes\agencia\images\MiddleCenterBg.jpg" />
+    <Content Include="App_Themes\agencia\images\plus.gif" />
+    <Content Include="App_Themes\agencia\images\ProductNameSS.gif" />
+    <Content Include="App_Themes\agencia\images\ProductNameSS.png" />
+    <Content Include="App_Themes\agencia\images\QuestLogo.gif" />
+    <Content Include="App_Themes\agencia\images\search\header.gif" />
+    <Content Include="App_Themes\agencia\images\tab.gif" />
+    <Content Include="App_Themes\agencia\images\table-header.gif" />
+    <Content Include="App_Themes\agencia\images\topbar.gif" />
+    <Content Include="App_Themes\agencia\images\TopStrip.gif" />
+    <Content Include="App_Themes\agencia\images\tr.gif" />
+    <Content Include="App_Themes\agencia\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="App_Themes\agencia\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\agencia\images\window.jpg" />
+    <Content Include="App_Themes\agencia\images\x.gif" />
+    <Content Include="App_Themes\agencia\jquery-ui-1.8.9.custom.css" />
+    <Content Include="App_Themes\agencia\jquery.fancybox-1.3.4.css" />
+    <Content Include="App_Themes\agencia\style.css" />
+    <Content Include="App_Themes\caaar\css.css" />
+    <Content Include="App_Themes\caaar\fancybox\blank.gif" />
+    <Content Include="App_Themes\caaar\fancybox\fancybox-x.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancybox-y.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancybox.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_close.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_loading.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_nav_left.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_nav_right.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_e.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_n.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_ne.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_nw.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_s.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_se.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_sw.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_shadow_w.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_title_left.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_title_main.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_title_over.png" />
+    <Content Include="App_Themes\caaar\fancybox\fancy_title_right.png" />
+    <Content Include="App_Themes\caaar\images\button-bg.gif" />
+    <Content Include="App_Themes\caaar\images\loader.gif" />
+    <Content Include="App_Themes\caaar\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\caaar\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_454545_256x240.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_888888_256x240.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App_Themes\caaar\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\caaar\img\bg_tab.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_adicionar.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_atualizar.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_cancelar.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_editar.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_excluir.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_ok.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_revogar_acesso.jpg" />
+    <Content Include="App_Themes\caaar\img\btn_solicitar_acesso.jpg" />
+    <Content Include="App_Themes\caaar\img\calendario.jpg" />
+    <Content Include="App_Themes\caaar\img\frame_superior.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_baixo_bg.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_baixo_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_baixo_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_lateral_bg.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_lateral_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_lateral_divisoria.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_lateral_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_linha_bg.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_linha_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_interno_linha_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_lateral_bg_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\grid_lateral_bg_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_avatar.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_duvida.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_engrenagem.gif" />
+    <Content Include="App_Themes\caaar\img\ico_engrenagem.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_pasta.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pasta.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_pasta_relatorio.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pc_engrenagem.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pessoas.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pessoas.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_pessoas_lapis.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pessoas_lapis.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_pessoas_relatorios.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pessoa_engrenagem.gif" />
+    <Content Include="App_Themes\caaar\img\ico_pessoa_engrenagem.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_relatorio.gif" />
+    <Content Include="App_Themes\caaar\img\ico_relatorio.jpg" />
+    <Content Include="App_Themes\caaar\img\ico_relatorio_engrenagem.gif" />
+    <Content Include="App_Themes\caaar\img\ico_visto.gif" />
+    <Content Include="App_Themes\caaar\img\imagem_treeview.jpg" />
+    <Content Include="App_Themes\caaar\img\imgbolavermelha.jpg" />
+    <Content Include="App_Themes\caaar\img\imgboneco.jpg" />
+    <Content Include="App_Themes\caaar\img\imgbotao.jpg" />
+    <Content Include="App_Themes\caaar\img\imgcoroa.jpg" />
+    <Content Include="App_Themes\caaar\img\imglinha.jpg" />
+    <Content Include="App_Themes\caaar\img\imgmenu.jpg" />
+    <Content Include="App_Themes\caaar\img\imgpasta.jpg" />
+    <Content Include="App_Themes\caaar\img\imgX.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grande_grid_bg.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grande_grid_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grande_grid_divisoria.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grande_grid_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grid_principal_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\linha_grid_principal_esq.jpg" />
+    <Content Include="App_Themes\caaar\img\popup_header.jpg" />
+    <Content Include="App_Themes\caaar\img\rodape.jpg" />
+    <Content Include="App_Themes\caaar\img\tab_desabilitada.jpg" />
+    <Content Include="App_Themes\caaar\img\tab_habilitada.jpg" />
+    <Content Include="App_Themes\caaar\img\topo_grid_bg.jpg" />
+    <Content Include="App_Themes\caaar\img\topo_grid_dir.jpg" />
+    <Content Include="App_Themes\caaar\img\topo_grid_esq.jpg" />
+    <Content Include="App_Themes\caaar\jquery-ui-1.8.12.custom.css" />
+    <Content Include="App_Themes\caaar\jquery.fancybox-1.3.4.css" />
+    <Content Include="manager-access.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="images\folder.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\PermissionData.cs" />
+    <Compile Include="manager-access.aspx.cs">
+      <DependentUpon>manager-access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager-access.aspx.designer.cs">
+      <DependentUpon>manager-access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48667</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48667/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
